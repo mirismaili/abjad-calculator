@@ -1,0 +1,44 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"standard"
+	],
+	"parserOptions": {
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"rules": {
+		"no-tabs": "off",
+		"indent": [
+			"error",
+			"tab"
+		],
+		"no-trailing-spaces": [
+			"warn",
+			{
+				"skipBlankLines": true
+			}
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"semi": [
+			"error",
+			"never"
+		],
+		"no-unused-vars": "warn",
+		"no-multiple-empty-lines": "warn",
+		"comma-dangle": [
+			"warn",
+			"always-multiline"
+		]
+	}
+}

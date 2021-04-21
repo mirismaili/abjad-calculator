@@ -1,0 +1,37 @@
+{
+	"name": "abjad",
+	"version": "0.0.0",
+	"description": "",
+	"keywords": [
+		"ابجد",
+		"حساب جمل",
+		"حساب ابجد",
+		"حساب حروف ابجد"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mirismaili/abjad"
+	},
+	"license": "MIT",
+	"author": "S. Mahdi Mir-Ismaili <s.m.mirismaili@gmail.com>",
+	"type": "module",
+	"main": "main.js",
+	"scripts": {
+		"start": "node --experimental-specifier-resolution=node main.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"eslint": "^7.24.0",
+		"eslint-config-standard": "^16.0.2",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-promise": "^5.1.0"
+	},
+	"engines": {
+		"node": ">=14"
+	},
+	"files": [
+		"main.js"
+	]
+}
