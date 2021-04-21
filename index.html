@@ -5,13 +5,20 @@
     <title>Title</title>
 
     <script type="module">
-		 import { calculateAbjadCode, intToFa } from './main.js'
+		 import calculateAbjadCode, { intToFa } from './main.js'
 
-		 document.getElementById('input').addEventListener('input', event =>
-				 document.getElementById('result').innerHTML =
-						 intToFa(calculateAbjadCode(event.target.value)),
-		 )
+		 const input = document.getElementById('input')
 
+		 input.addEventListener('input', _ => {
+			 const num = calculateAbjadCode(input.value)
+			 return document.getElementById('result').innerHTML = isNaN(num) ? '؟' : intToFa(num)
+		 })
+
+		 input.value = 'علی'
+		 input.focus()
+		 input.select()
+
+		 input.dispatchEvent(new Event('input'))
     </script>
 
     <style>
@@ -32,11 +39,11 @@
         }
 
         div {
-            margin: 16px
+            margin: 16px;
         }
 
         a {
-            text-decoration: none
+            text-decoration: none;
         }
     </style>
 </head>
@@ -50,7 +57,7 @@
     <a href="https://fa.wikipedia.org/wiki/حساب_جمل">
         حساب جُمَّل (ابجد):
     </a>
-    <label id="result">۱۱۰</label>
+    <label id="result"></label>
 </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
  * @author {@link https://mirismaili.github.io S. Mahdi Mir-Ismaili}
  */
 
-const lettersValuesMap = {
+export const lettersValuesMap = {
 	ا: 1,
 	آ: 1,
 	أ: 1,
