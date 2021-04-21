@@ -52,8 +52,8 @@ export const lettersValuesMap = {
 }
 
 export const calculateAbjadCode = phrase => {
-	const filteredPhrase = phrase.replace(/[.,/#!$%^&*;:{}=\-_`~()\s]/g, '')
-	let code = 0
+	const filteredPhrase = phrase.replace(/[.,/#!$%^&*;:{}=\-_`~()\s]/g, '')  // https://stackoverflow.com/a/4328722/5318303
+	let result = 0
 	for (const ch of filteredPhrase) {
 		const chCode = ch.charCodeAt(0)
 		if (chCode < 0x600 || chCode > 0x8FF) {  // Any non-{Persian/Arabic} character
@@ -61,14 +61,14 @@ export const calculateAbjadCode = phrase => {
 			return NaN
 		}
 		
-		code += lettersValuesMap[ch] ?? 0
+		result += lettersValuesMap[ch] ?? 0
 	}
 	
 	console.debug({
 		filteredPhrase,
-		code,
+		result,
 	})
-	return code
+	return result
 }
 
 export default calculateAbjadCode
