@@ -28,4 +28,8 @@ console.log({
 
 ## Example:
 
+[![ماشین حساب ابجد (آنلاین/آفلاین)](https://raw.githubusercontent.com/mirismaili/abjad-calculator/main/res/sample.png)](https://mirismaili.github.io/abjad-calculator)
+
 https://mirismaili.github.io/abjad-calculator
+
+*See [index.html](https://github.com/mirismaili/abjad-calculator/blob/main/index.html).*
