@@ -16,10 +16,25 @@
 			"error",
 			"tab"
 		],
+		"curly": [
+			"error",
+			"multi"
+		],
 		"no-trailing-spaces": [
 			"warn",
 			{
 				"skipBlankLines": true
+			}
+		],
+		"no-multi-spaces": [
+			"warn",
+			{
+				"ignoreEOLComments": true,
+				"exceptions": {
+					"Property": false,
+					"VariableDeclarator": true,
+					"ImportDeclaration": true
+				}
 			}
 		],
 		"linebreak-style": [

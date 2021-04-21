@@ -51,7 +51,27 @@ const lettersValuesMap = {
 	غ: 1000,
 }
 
-export const calculateAbjadCode = word => [...word].reduce((acc, cur) => acc + (lettersValuesMap[cur] || 0), 0)
+export const calculateAbjadCode = phrase => {
+	const filteredPhrase = phrase.replace(/[.,/#!$%^&*;:{}=\-_`~()\s]/g, '')
+	let code = 0
+	for (const ch of filteredPhrase) {
+		const chCode = ch.charCodeAt(0)
+		if (chCode < 0x600 || chCode > 0x8FF) {  // Any non-{Persian/Arabic} character
+			console.debug({ filteredPhrase })
+			return NaN
+		}
+		
+		code += lettersValuesMap[ch] ?? 0
+	}
+	
+	console.debug({
+		filteredPhrase,
+		code,
+	})
+	return code
+}
+
+export default calculateAbjadCode
 
 export const intToFa = (() => {
 	const enDigitToFaDifference = '۰'.charCodeAt(0) - '0'.charCodeAt(0)
