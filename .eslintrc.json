@@ -20,6 +20,20 @@
 			"error",
 			"multi"
 		],
+		"object-curly-spacing": [
+			"warn",
+			"never",
+			{
+				"arraysInObjects": false,
+				"objectsInObjects": false
+			}
+		],
+		"object-curly-newline": [
+			"warn",
+			{
+				"consistent": true
+			}
+		],
 		"no-trailing-spaces": [
 			"warn",
 			{

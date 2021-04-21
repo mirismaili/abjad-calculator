@@ -15,15 +15,12 @@ yarn add abjad
 ## Usage
 
 ```javascript
-import calculateAbjadCode, { intToFa } from 'abjad'
+import calculateAbjadCode, {intToFa} from 'abjad'
 
 const num = calculateAbjadCode(input.value)
 const numFa = isNaN(num) ? '؟' : intToFa(num)
 
-console.log({
-	num,
-	numFa
-})
+console.log({num, numFa})
 ```
 
 ## Example:

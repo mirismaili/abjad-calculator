@@ -57,17 +57,14 @@ export const calculateAbjadCode = phrase => {
 	for (const ch of filteredPhrase) {
 		const chCode = ch.charCodeAt(0)
 		if (chCode < 0x600 || chCode > 0x8FF) {  // Any non-{Persian/Arabic} character
-			console.debug({ filteredPhrase })
+			console.debug({filteredPhrase})
 			return NaN
 		}
 		
 		result += lettersValuesMap[ch] ?? 0
 	}
 	
-	console.debug({
-		filteredPhrase,
-		result,
-	})
+	console.debug({filteredPhrase, result})
 	return result
 }
 
