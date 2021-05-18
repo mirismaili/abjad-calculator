@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <title>ماشین حساب أبجد (آنلاین/آفلاین)</title>
+	<meta charset="UTF-8">
+	<title>ماشین حساب أبجد (آنلاین/آفلاین)</title>
 
-    <link href="res/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="res/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
-    <script type="module">
-		 import calculateAbjadCode, {intToFa} from './src/main.js'
+	<script type="module">
+		import calculateAbjadCode, {intToFa} from './src/main.js'
 
-		 const input = document.getElementById('input')
+		const input = document.getElementById('input')
 
-		 input.addEventListener('input', _ => {
-			 const num = calculateAbjadCode(input.value)
-			 return document.getElementById('result').innerHTML = isNaN(num) ? '؟' : intToFa(num)
-		 })
+		input.addEventListener('input', _ => {
+			const num = calculateAbjadCode(input.value)
+			return document.getElementById('result').innerHTML = isNaN(num) ? '؟' : intToFa(num)
+		})
 
-		 input.value = 'علی'
-		 input.focus()
-		 input.select()
+		input.value = 'علی'
+		input.focus()
+		input.select()
 
-		 input.dispatchEvent(new Event('input'))
-    </script>
+		input.dispatchEvent(new Event('input'))
+	</script>
 
-    <style>
-        @font-face {
-            font-family: Vazir;
-            src: local('Vazir'), url('res/Vazir-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
+	<style>
+		@font-face {
+			font-family: Vazir;
+			src: local('Vazir'), url('res/Vazir-Regular.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
 
-        html {
-            font-size: 3vh;
-            font-family: Vazir, sans-serif;
-        }
+		html {
+			font-size: 3vh;
+			font-family: Vazir, sans-serif;
+		}
 
-        input {
-            font-size: 1em;
-            font-family: Vazir, sans-serif;
-        }
+		input {
+			font-size: 1em;
+			font-family: Vazir, sans-serif;
+		}
 
-        ::selection {
-            color: initial;
-            background-color: lightskyblue;
-        }
+		::selection {
+			color: initial;
+			background-color: lightskyblue;
+		}
 
-        div {
-            margin: 16px;
-        }
+		div {
+			margin: 16px;
+		}
 
-        a {
-            text-decoration: none;
-        }
-    </style>
+		a {
+			text-decoration: none;
+		}
+	</style>
 </head>
 
 <body>
 <div>
-    <label for="input">واژه / عبارت:</label>
-    <input id="input" type="text" value="علی"/>
+	<label for="input">واژه / عبارت:</label>
+	<input id="input" type="text" value="علی"/>
 </div>
 <div>
-    <a href="https://fa.wikipedia.org/wiki/حساب_جمل">
-        حساب جُمَّل (ابجد):
-    </a>
-    <label id="result"></label>
+	<a href="https://fa.wikipedia.org/wiki/حساب_جمل">
+		حساب جُمَّل (ابجد):
+	</a>
+	<label id="result"></label>
 </div>
 </body>
 </html>

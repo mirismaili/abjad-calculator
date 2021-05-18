@@ -23,21 +23,15 @@
 	"author": "S. Mahdi Mir-Ismaili <s.m.mirismaili@gmail.com>",
 	"type": "module",
 	"main": "src/main.js",
+	"files": [
+		"src"
+	],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {},
-	"devDependencies": {
-		"eslint": "^7.24.0",
-		"eslint-config-standard": "^16.0.2",
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-promise": "^5.1.0"
-	},
+	"devDependencies": {},
 	"engines": {
 		"node": ">=14"
-	},
-	"files": [
-		"src"
-	]
+	}
 }
