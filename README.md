@@ -1,6 +1,6 @@
 # Abjad-Calculator
 
-> محاسبه‌گر اعداد حروف أبجد (حساب جُمَّل) برای واژگان و عبارت‌ها
+> محاسبه‌گر شمارگان حروف أبجد (حساب جُمَّل) برای واژگان و عبارت‌ها
 
 [![npm (scoped)](https://img.shields.io/npm/v/abjad.svg)](https://npmjs.com/package/abjad)
 [![install size](https://packagephobia.now.sh/badge?p=abjad)](https://packagephobia.now.sh/result?p=abjad)
