@@ -2,37 +2,40 @@
 <html dir="rtl" lang="fa">
 <head>
 	<meta charset="UTF-8">
+	<meta content="initial-scale=1, width=device-width" name="viewport" />
+
 	<title>ماشین حساب أبجد (آنلاین/آفلاین)</title>
 
 	<link href="res/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
 	<script type="module">
 		import calculateAbjadCode, {intToFa} from './src/main.js'
-
+		
 		const input = document.getElementById('input')
-
+		
 		input.addEventListener('input', _ => {
 			const num = calculateAbjadCode(input.value)
-			return document.getElementById('result').innerHTML = isNaN(num) ? '؟' : intToFa(num)
+			document.getElementById('result').innerHTML = isNaN(num) ? '؟' : intToFa(num)
 		})
-
+		
 		input.value = 'علی'
 		input.focus()
 		input.select()
-
+		
 		input.dispatchEvent(new Event('input'))
 	</script>
 
 	<style>
 		@font-face {
 			font-family: Vazir;
-			src: local('Vazir'), url('res/Vazir-Regular.woff') format('woff');
+			src: local('Vazir'),
+			url('res/Vazir-Regular.woff2') format('woff2'),
+			url('res/Vazir-Regular.woff') format('woff');
 			font-weight: normal;
 			font-style: normal;
 		}
 
 		html {
-			font-size: 3vh;
 			font-family: Vazir, sans-serif;
 		}
 
@@ -59,7 +62,7 @@
 <body>
 <div>
 	<label for="input">واژه / عبارت:</label>
-	<input id="input" type="text" value="علی"/>
+	<input id="input" type="text" />
 </div>
 <div>
 	<a href="https://fa.wikipedia.org/wiki/حساب_جمل">

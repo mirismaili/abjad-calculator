@@ -52,7 +52,7 @@ export const lettersValuesMap = {
 }
 
 export const calculateAbjadCode = phrase => {
-	const filteredPhrase = phrase.replace(/[.,/#!$%^&*;:{}=\-_`~()\s]/g, '')  // https://stackoverflow.com/a/4328722/5318303
+	const filteredPhrase = phrase.replaceAll(/[.,/#!$%^&*;:{}=\-_`~()\s]/g, '')  // https://stackoverflow.com/a/4328722/5318303
 	let result = 0
 	for (const ch of filteredPhrase) {
 		const chCode = ch.charCodeAt(0)
@@ -74,5 +74,5 @@ export const intToFa = (() => {
 	const enDigitToFaDifference = '۰'.charCodeAt(0) - '0'.charCodeAt(0)
 	const enDigitToFa = d => String.fromCharCode(d.charCodeAt(0) + enDigitToFaDifference)
 	
-	return num => [...num.toString()].map(enDigitToFa).join('')
+	return num => [...String(num)].map(enDigitToFa).join('')
 })()
